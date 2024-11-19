@@ -5,7 +5,7 @@ title: 'welcome to my site!'
 
 <img src="pfp.png" width="60%" height="auto" />
 
-my name's alexa kristensen and i'm a technical writer.  :alien:
+my name's alexa and i'm a technical writer.  :alien:
 
 i've spent the last three years helping developers build better apps. i'm a big fan of docs-as-code, chatting with engineers, and editing (or deleting) stale docs content. 
 
