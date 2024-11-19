@@ -1,4 +1,44 @@
 baseURL: https://example.org/
 languageCode: en-us
-title: My New Hugo Site
+title: alexa's portfolio
 theme: hextra
+enableInlineShortcodes: true
+
+markup:
+  goldmark:
+    parser:
+      attribute:
+        block: true  # default is false
+    renderer:
+      unsafe: true  # default is false
+      
+menu:
+  main:
+    - name: Writing samples
+      pageRef: /docs
+      weight: 1
+    - name: Resume
+      pageRef: /resume
+      weight: 2
+    - name: Search
+      weight: 3
+      params:
+        type: search
+    - name: GitHub
+      weight: 4
+      url: "https://github.com/akristen"
+      params:
+        icon: github
+
+params:
+  navbar:
+    displayTitle: true
+    displayLogo: true
+
+    logo:
+      path: /logo.png
+      link: /
+      width: 60
+      height: 40
+
+enableEmoji: true

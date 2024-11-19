@@ -1,0 +1,14 @@
+/* Custom CSS for PDF Embed */
+.embed-pdf {
+    height: 80vh;   /* Adjust height as needed */
+    width: 80vw;    /* Adjust width to control size */
+    max-width: 100%; 
+    display: block;
+    margin: 0 auto;
+}
+
+.pdf-container {
+    height: 100%;
+    display: block;
+    overflow: hidden;
+}
