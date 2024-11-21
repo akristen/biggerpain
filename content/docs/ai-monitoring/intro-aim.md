@@ -3,11 +3,11 @@ title: 'Introduction to monitoring for AI'
 weight: 1
 ---
 
-AI monitoring is our solution for application monitoring (APM) for AI. When you enable AI monitoring, our APM agents can give you end-to-end visibility into performance, cost, and quality of [supported models](/docs/ai-monitoring/compatibility-requirements-ai-monitoring) from vendors like OpenAI and BedRock. Explore how users interact with an AI assistant, dig into trace-level details about a model's response to an AI event, and compare the performance of different models across app environments. 
+Monitoring for AI is our solution for application monitoring (APM) for AI. When you enable monitoring for AI, our agents can give you end-to-end visibility into performance, cost, and quality of [supported models](/docs/ai-monitoring/compatibility-requirements-ai-monitoring) from vendors like OpenAI and BedRock. Explore how users interact with an AI assistant, dig into trace-level details about a model's response to an AI event, and compare the performance of different models across app environments. 
 
-## How does AI monitoring work?
+## How does monitoring for AI work?
 
-To get started with AI monitoring, you'll instrument your AI-powered app with one of our APM agents. Once you've instrumented your app, you can enable AI monitoring so the agent can capture LLM observability data.
+To get started with monitoring for AI, you'll instrument your AI-powered app with one of our APM agents. Once you've instrumented your app, you can enable monitoring for AI so the agent can capture LLM observability data.
 
 When your AI assistant receives a prompt and returns a response, the agent captures metric and event data generated from external LLMs and vector stores. Our agent can:
 
@@ -17,7 +17,7 @@ When your AI assistant receives a prompt and returns a response, the agent captu
 
 You can access all this information and more from the New Relic platform, then create alerts and dashboards to help you effectively manage your AI data and improve performance.
 
-## Improve AI performance with AI monitoring
+## Improve AI performance with monitoring for AI
 
 AI monitoring can help you answer critical questions about AI app performance: are your end users waiting too long for a response? Is there a recent spike in token usage? Are there patterns of negative user feedback around certain topics? With AI monitoring, you can see data specific to the AI-layer:
 
@@ -25,7 +25,7 @@ AI monitoring can help you answer critical questions about AI app performance: a
 * If you're using different models across app environments, you can [compare the cost and performance of your apps before deploying](/docs/ai-monitoring/view-ai-data/#model-comparison).
 * Are you concerned about data compliance? [Learn how to create drop filters](/docs/ai-monitoring/drop-sensitive-data) to drop sensitive data before you send it to New Relic.
 
-## Get started with AI monitoring
+## Get started with monitoring for AI
 
 Ready to get started? Make sure to [confirm that you can instrument your AI library or framework](/docs/ai-monitoring/compatibility-requirements-ai-monitoring). You may need to update the agent if you've already instrumented your app.
 

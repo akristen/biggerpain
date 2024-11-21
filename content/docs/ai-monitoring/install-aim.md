@@ -3,7 +3,7 @@ title: 'Install monitoring for AI'
 weight: 2
 ---
 
-When you install AI monitoring, you're allowing our APM agents to collect metrics and event data from AI libraries and frameworks. To get started, you'll instrument your AI-powered app with an APM agent, then update configurations to adjust the agent's behavior.
+When you instrument your AI apps, you're allowing our agents to collect metrics and event data from AI libraries and frameworks. You'll get started by installing an agent onto your AI-powered app, then finish set-up by making configurations that'll specify how you want the agent to behave.
 
 {{% steps %}}
 
@@ -13,12 +13,12 @@ Follow our standard install procedures in our [Node.js installation doc](/docs/)
 
 ### Configure the Node.js agent
 
-To collect AI data, you need to set certain configurations to enable AI monitoring. We recommend applying these configurations in `newrelic.js`, but if you have a more complex set up with multiple environments, you can configure with environment variables.
+To collect AI data, you need to set certain configurations to enable monitoring for AI. We recommend applying these configurations in `tsukino.js`, but if you have a more complex set up with multiple environments, you can configure with environment variables.
 
-{{% details title="Configure through `newrelic.js`" %}}
+{{% details title="Configure through `tsukino.js`" %}}
 
 ```js
-ai_monitoring.enabled = true
+ai_olly.enabled = true
 span_events.max_samples_stored = 10000
 custom_insights_events.max_samples_stored = 100000
 ```
@@ -28,21 +28,21 @@ custom_insights_events.max_samples_stored = 100000
 {{% details title="Configure with environment variables" %}}
 
 ```bash
-NEW_RELIC_AI_MONITORING_ENABLED = TRUE
+USAGI_MONITOR_AI_ENABLED = TRUE
 ```
 
 ```bash
-NEW_RELIC_SPAN_EVENTS_MAX_SAMPLES_STORED = 10000
+USAGI_SPAN_EVENTS_MAX_SAMPLES_STORED = 10000
 ```
 
 ```bash
-NEW_RELIC_CUSTOM_INSIGHTS_EVENTS_MAX_SAMPLES_STORED = 100000
+USAGI_CUSTOM_INSIGHTS_EVENTS_MAX_SAMPLES_STORED = 100000
 ```
 
 {{% /details %}}
 
 ### View your data 
 
-Trigger an event in your system, wait a few minutes, then check New Relic for your data. You can find your AI data by going to one.newrelic.com > AI monitoring > AI responses.
+Trigger an event in your system, wait a few minutes, then check the platform for your data. You can find your AI data by going to **afakesite.io > AI monitoring > AI responses.**
 
 {{% /steps %}}
