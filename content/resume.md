@@ -4,4 +4,4 @@ cascade:
   type: default
 ---
 
-{{< embed-pdf url="/kristensenResume.pdf" hidePaginator="true" renderPageNum="1" >}}
+{{< embed-pdf url="/pdfs/kristensenResume.pdf" hidePaginator="true" renderPageNum="1" >}}
