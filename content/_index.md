@@ -13,10 +13,12 @@ i help developers build better apps. i'm a big fan of docs-as-code, chatting wit
 
 my site is still under construction!
 
-<div class="after-content-icons">
-{{< figure src="/image/bug.png" link="https://www.linkedin.com/in/arkristen/" height="100x" width="100x" class="figure-custom" >}}
-
-{{< figure src="/image/github-mark.png" link="https://github.com/akristen" width="90x" height="90x" class="figure-custom2" >}}
+<div class="figure">
+<a href="https://www.linkedin.com/in/arkristen/" target="_blank">
+  <img src="/image/bug.png" alt="LinkedIn" width="50" height="50">
+</a><a href="https://github.com/akristen" target="_blank">
+  <img src="/image/github-mark.png" alt="GitHub" width="50" height="50">
+</a>
 </div>
 
 </center>
