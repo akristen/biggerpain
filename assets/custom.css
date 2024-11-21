@@ -12,3 +12,20 @@
     display: block;
     overflow: hidden;
 }
+
+.figure a {
+    display: inline-block;
+    margin-right: 10px;
+    width: 100%;
+}
+
+/* Update the background color to pink */
+body {
+    background-color: #f8c8d1; /* Soft pink color */
+  }
+  
+  /* Optional: Update other areas like header or footer if desired */
+  header, footer {
+    background-color: #f8c8d1;
+  }
+  

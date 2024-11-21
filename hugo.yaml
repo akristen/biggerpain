@@ -15,7 +15,7 @@ markup:
 menu:
   main:
     - name: writing samples
-      pageRef: /docs
+      pageRef: /docs/portfolio-intro
       weight: 1
     - name: resume
       pageRef: /resume
@@ -32,7 +32,7 @@ params:
     displayLogo: true
 
     logo:
-      path: logo.png
+      path: /image/logo.png
       link: /
       width: 60
       height: 40
