@@ -13,6 +13,20 @@ I've curated these docs to capture different docs types, per [Diataxis](https://
 
 I recommend [checking out my GitHub account](https://github.com/akristen) if you're curious about how I provide feedback to engineering and product SMEs, or how I might manage sweeping changes to information architecture.
 
+## Learning about genAI 
+
+There's a lot I could say about my one year journey supporting a feature for genAI-powered apps (hereby AI apps going forward, for brevity).
+
+From a professional POV, the project gave me real hands on experience working on a feature with industry ambiguity. Our user researcher described it well: GenAI is an area where practicioners learn as they do. I found myself learning alongside my SMEs while relying on academic research and tech news to fill in the blanks. I ventured lots of guesses about how embedding, tokenization, or various models might work, and those guesses were often inelegant at best. My SMEs were patient and ran the gamut of all possible tech roles: software architects, PMs, field folks, engineers, designers, you name it.
+
+All of this, and I still needed to understand what our feature did and who our audience was.
+
+The doc I've provided is an introduction doc that covers a mix of observability and AI concepts. Despite my reservations about AI, this project was a labor of love! I recommend [exploring the entire area for all of the docs work I did in a few months](https://docs.newrelic.com/docs/ai-monitoring/intro-to-ai-monitoring/).
+
+## Going deep with SREs
+
+As an associate writer, I didn't fully appreciate the relationship between apps and the resources that service them. I worked on an open-ended tutorial series in FY23 that demanded some attention to this nuance, and I'm pretty pleased with the results. The goal was to guide SREs on a platform journey so they could troubleshoot app problems with infra-specific metrics and events. The doc hosted on my site is one part of several for this series. 
+
 ## Untangling the AWS story
 
 tl;dr: You can collect AWS metrics and store them in Company's platform by polling individual API endpoints for each AWS service, or by integrating an agent with an AWS service. Company wanted to position the integration as our primary, recommended method. 
@@ -26,17 +40,3 @@ With this context, I made some decisions:
 * I [preserved the set up instructions for the API polling method](https://docs.newrelic.com/docs/infrastructure/amazon-integrations/connect/set-up-aws-api-polling/) and grouped that doc with other alternative set-up procedures. (tl;dr Amazon is really complex and there were different procedures if you maintain EC2 instances, use their Kubernetes service, or are a GovCloud customer.)
 
 This project was ad hoc, ambiguous, and really fun. I learned a lot about AWS and got to do some IA restructuring, which is my favorite kind of docs work.
-
-## Learning about genAI 
-
-There's a lot I could say about my one year journey supporting a feature for genAI-powered apps (hereby AI apps going forward, for brevity).
-
-From a professional POV, the project gave me real hands on experience working on a feature with industry ambiguity. Our user researcher described it well: GenAI is an area where practicioners learn as they do. I found myself learning alongside my SMEs while relying on academic research and tech news to fill in the blanks. I ventured lots of guesses about how embedding, tokenization, or various models might work, and those guesses were often inelegant at best. My SMEs were patient and ran the gamut of all possible tech roles: software architects, PMs, field folks, engineers, designers, you name it.
-
-All of this, and I still needed to understand what our feature did and who our audience was.
-
-The doc I've provided is an introduction doc that covers a mix of observability and AI concepts. Despite my reservations about AI, this project was a labor of love! I recommend [exploring the entire area for all of the docs work I did in a few months](https://docs.newrelic.com/docs/ai-monitoring/intro-to-ai-monitoring/).
-
-## Going deep with SREs
-
-Even though Company offered some infrastructure solutions, they're primarily known as being app monitoring-forward. As an associate writer, I didn't fully appreciate what this meant or how a docs site might expose a product's strengths and weaknesses. 
