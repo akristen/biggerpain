@@ -1,6 +1,6 @@
 baseURL: https://example.org/
 languageCode: en-us
-title: alexa's portfolio
+title: ( ͡° ͜ʖ ͡ °)
 theme: hextra
 enableInlineShortcodes: true
 
@@ -14,21 +14,16 @@ markup:
       
 menu:
   main:
-    - name: Writing samples
+    - name: writing samples
       pageRef: /docs
       weight: 1
-    - name: Resume
+    - name: resume
       pageRef: /resume
       weight: 2
     - name: Search
       weight: 3
       params:
         type: search
-    - name: GitHub
-      weight: 4
-      url: "https://github.com/akristen"
-      params:
-        icon: github
 
 params:
   navbar:
@@ -36,7 +31,7 @@ params:
     displayLogo: true
 
     logo:
-      path: /logo.png
+      path: logo.png
       link: /
       width: 60
       height: 40
