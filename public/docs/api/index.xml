@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>( ͡° ͜ʖ ͡ °) – API placeholder</title>
+    <title>home! – API placeholder</title>
     <link>http://localhost:1313/docs/api/</link>
-    <description>Recent content in API placeholder on ( ͡° ͜ʖ ͡ °)</description>
+    <description>Recent content in API placeholder on home!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
