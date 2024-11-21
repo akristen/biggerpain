@@ -43,6 +43,6 @@ USAGI_CUSTOM_INSIGHTS_EVENTS_MAX_SAMPLES_STORED = 100000
 
 ### View your data 
 
-Trigger an event in your system, wait a few minutes, then check the platform for your data. You can find your AI data by going to **afakesite.io > AI monitoring > AI responses.**
+Trigger an event in your system, wait a few minutes, then check the platform for your data. You can find your AI data by going to **afakesite.io > Monitoring for AI > AI responses.**
 
 {{% /steps %}}

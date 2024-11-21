@@ -1,6 +1,6 @@
 baseURL: https://example.org/
 languageCode: en-us
-title: ( ͡° ͜ʖ ͡ °)
+title: home!
 theme: hextra
 enableInlineShortcodes: true
 
@@ -26,6 +26,7 @@ menu:
         type: search
 
 params:
+
   navbar:
     displayTitle: true
     displayLogo: true
@@ -35,5 +36,11 @@ params:
       link: /
       width: 60
       height: 40
+
+  page:
+    # full (100%), wide (90rem), normal (1280px)
+    width: wide
+  
+  favicon: favicon.ico
 
 enableEmoji: true
