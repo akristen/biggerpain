@@ -105,6 +105,23 @@ strong {
   font-weight: bolder;
 }
 
+.after-content-icons {
+  display: inline-flex;
+  padding: 15px;
+  width: 150px;
+  height: auto;
+  margin: 1em auto;
+}
+
+.figure-custom {
+  padding-right: 25px;
+  padding-top: 3px;
+}
+
+.figure-custom2 {
+  padding-bottom: 10px;
+}
+
 /*
 1. Use the user's configured `mono` font-family by default.
 2. Use the user's configured `mono` font-feature-settings by default.
