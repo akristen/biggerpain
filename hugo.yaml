@@ -15,15 +15,21 @@ markup:
 menu:
   main:
     - name: writing samples
-      pageRef: /docs/portfolio-intro
+      pageRef: /docs
       weight: 1
     - name: resume
       pageRef: /resume
       weight: 2
-    - name: Search
+    - name: GithHub
       weight: 3
+      url: "https://github.com/akristen"
       params:
-        type: search
+        icon: github
+    - name: LinkedIn
+      weight: 4
+      url: "https://www.linkedin.com/in/arkristen/"
+      params:
+        icon: linkedin
 
 params:
 
