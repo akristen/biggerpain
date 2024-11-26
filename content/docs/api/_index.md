@@ -1,6 +1,7 @@
 ---
 title: API reference `record_llm_feedback_event`
-metaDescription: This call records an LLM feedback event so you can correlate end user feedback with a GenAI response
+weight: 2
+description: Record an LLM feedback event so you can correlate end user feedback with an LLM response
 ---
 
 ## Syntax 
@@ -17,10 +18,10 @@ Ensure you have your API key and you're using agent version 9.8.0 or higher.
 
 ## Description 
 
-The agent API can record a feedback event `LlmFeedbackMessage` that describes whether an end user found an LLM response helpful. To view this data, you need to create a function call that correlates the feedback itself _and_ the LLM message it refers to. The agent API, however, records these details in different places since both events occur in two transactions. To retrieve this data, you need to build a function call that:
+The agent API can record a feedback event `LlmFeedbackMessage` that describes whether an end user found an LLM response helpful. You need to create a function that correlates the feedback itself with the relevant LLM message. The agent API, however, records this data in different places since both events occur in two transactions. This means your function needs to:
 
-1. Captures the trace ID within the endpoint that generates the LLM message (`fakefunction.agent.current_trace_id()`). The trace ID acts as the connective tissue between feedback and LLM rresponse. 
-2. Passes that trace ID to the endpoint that records the feedback (`fakefunction.agent.record_llm_feedback_event()`)
+1. Capture the trace ID within the endpoint that generates the LLM message (`fakefunction.agent.current_trace_id()`). The trace ID acts as the connective tissue between feedback and LLM rresponse. 
+2. Pass that trace ID to the endpoint that records the feedback (`fakefunction.agent.record_llm_feedback_event()`)
 
 ## Parameters 
 
@@ -37,8 +38,6 @@ The agent API can record a feedback event `LlmFeedbackMessage` that describes wh
 None.
 
 ## Example: Obtain trace ID and record feedback
-
-Example of recording a feedback event:
 
 ```py
     import fake.agent

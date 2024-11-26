@@ -1,8 +1,6 @@
 ---
-title: Resolve an outage with host data tutorial
-metaDescription: Learn how to identify failing apps using infrastructure data.
-tag:
-    - howto guide
+title: Tutorial to resolve app outage with host data
+description: Learn how to identify failing apps using infrastructure data.
 ---
 
 Your infrastructure requires regular inspection and maintenance. Like a city planner designing a new road or bridge, decisions about what your system needs should come from careful observation about existing limitations. For cities, this looks like adding new lanes to major thoroughfares when traffic congestion increases in the morning or evening. For a tech stack, this looks like a series of resource decisions that affect the performance of your APIs, services, and apps.

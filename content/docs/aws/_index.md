@@ -1,5 +1,6 @@
 ---
-title: 'Integrate with AWS procedure'
+title: 'Procedure to integrate AWS'
+description: Follow these procedures to integrate your AWS data into the platform. 
 ---
 
  You can collect metrics about your AWS services in a CloudWatch repository, then use [AWS CloudWatch Metric Streams](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Metric-Streams.html) to direct a real-time stream of metrics to a destination of your choice, like to Company. Integrating AWS with Company lets you view your AWS data alongside your other observability entities, giving you a seamless monitoring experience as you troubleshoot and make improvements to your system environment. 

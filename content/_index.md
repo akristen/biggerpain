@@ -1,6 +1,7 @@
 ---
 date: '2024-11-18T12:37:08-06:00'
 title: 'welcome to my site!'
+description: I write sometimes
 ---
 
 <img src="/image/pfp.png" width="30%" height="auto" />
