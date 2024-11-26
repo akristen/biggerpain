@@ -14,15 +14,13 @@ I've curated these docs to capture different docs types, per [Diátaxis](https:/
 
 I recommend [checking out my GitHub account](https://github.com/akristen) if you're curious about how I provide feedback to engineering and product SMEs, or how I might manage sweeping changes to information architecture.
 
-## Learning about GenAI 
+## Learning about LLMs 
 
-There's a lot I could say about my one year journey supporting a feature for GenAI-powered apps.
+In FY24, I supported a major feature launch that let data scientists and developers monitor their LLM-based apps. Regardless of my personal opinions about GenAI hype, the experience helped me wrestle with technology that had real industry ambiguity. Our user researcher summed it up well: GenAI is an area where practicioners learn as they do the thing. This held true for me, too. I found myself learning alongside my SMEs while my research expanded beyond tech news into the world of academia. 
 
-From a professional POV, the project gave me real hands on experience working on a feature with industry ambiguity. Our user researcher described it well: GenAI is an area where practicioners learn as they do. I found myself learning alongside my SMEs while relying on academic research and tech news to fill in the blanks. 
+I ventured lots of guesses about how embedding, tokenization, and various models might work. Those guesses proved to be inelegant at best, but my SMEs were patient and helpful. Together we pushed out a ton of docs about a completely new feature in a completely new tech space.
 
-I ventured lots of guesses about how embedding, tokenization, or various models might work, and those guesses proved to be inelegant at best. But my SMEs were patient and together we pushed out a lot of docs content about a completely new feature.
-
-I've included two docs from this feature release. The first is an introduction doc that covers a mix of observability and AI concepts. The second is an API reference for building a function within an agent API to retrieve certain kinds of data from a GenAI-powered app. 
+I've included two docs from this feature release. The first is an introduction doc that covers a mix of observability and AI concepts. The second is an API reference for retrieving certain kinds of LLM data. 
 
 ## Untangling the AWS story
 
@@ -40,9 +38,9 @@ This project was ad hoc, ambiguous, and really fun. I learned a lot about AWS an
 
 ## Going deep with SREs
 
-I created some how to guides in FY23 to help customers navigate the platform's dense UI. Since observability implies a large amount of data coming in about your system, I wanted these docs to help SREs (or whomever) chunk the UI into its relevant parts, then follow the data to identify root cause. I kept the story relatively simple for a couple reasons:
+I created some how-to guides in FY23 to help customers navigate the platform's dense UI. Since observability usually means any given user has a large amount of data coming in about their system, I wanted these docs to help users think about the product in a more meaningful way. I kept the story relatively simple for a couple reasons:
 
-* Since Company's customer base included mostly app developers, I thought a simple story could help them "think like an SRE."
-* If an SRE used the doc but had ample experience, I suspected they could take this basic framework for working with host and app data and complexify it to fit their use cases.
+* Since the majority of Company's customers are app developers, I decided a simple story could get them thinking like an SRE, even if that's not a hat they usually wear. 
+* If an SRE used the doc, I suspected they could take this basic framework and complexify it to fit their use cases.
 
-These how to guides gave me plenty of exposure to our field and support teams. While I chatted with product and engineering to get a sense of why they made certain usability decisions, it was important to me that I wrote a story about how our users are actually using the product, rather than how we expected them to behave. 
+These how-to guides gave me plenty of exposure to our field and support teams. While I chatted with product and engineering to get a sense of why they made certain prod decisions, it was important to me that I wrote a story about how our users are actually using the product, rather than how we wanted them to.

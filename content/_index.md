@@ -7,8 +7,8 @@ description: I write sometimes
 
 <center>
 
-:alien: i'm a technical writer who loves docs-as-code.  i spend my days writing about system performance and data so your devs can build better apps. 
+I'm a technical writer who's a big fan of docs-as-code. I spend my days writing about system performance and data so your devs can build better apps. 
 
-i have plenty of experience writing all kinds of docs, but i can also improve your UI copy, manage EOL comms, and whip up some GTM materials, too. i recommend first reading my [portfolio notes](/docs/) so you can get some insight about tooling and intended audience.
+While I'm a docs writer first, I can also improve your UI copy, manage EOL comms, and whip up some GTM materials, too. Before reading through my portfolio, I recommend taking a look at my [portfolio notes](/docs/) so you can get some insight about tooling and each doc's intended audiences. :alien: 
 
 </center>
