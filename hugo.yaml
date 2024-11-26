@@ -1,6 +1,6 @@
 baseURL: https://example.org/
 languageCode: en-us
-title: home!
+title: alexa kristensen
 theme: hextra
 enableInlineShortcodes: true
 
@@ -45,7 +45,14 @@ params:
 
   page:
     # full (100%), wide (90rem), normal (1280px)
-    width: wide
+    width: full
+  
+  footer:
+    enable: false
+  
+  theme:
+    default: system
+    displayToggle: true
   
   favicon: favicon.ico
 

@@ -20,7 +20,7 @@
 }
 
 /* Update the background color to pink */
-body {
+.body {
     background-color: #f8c8d1; /* Soft pink color */
   }
   
