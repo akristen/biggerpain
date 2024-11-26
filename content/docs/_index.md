@@ -5,12 +5,12 @@ description: Here's some context about my portfolio.
 
 The site is hosted by Netlify and built on Hugo with the [Hextra theme](https://imfing.github.io/hextra/docs/). I've added shortcode to display my resume as PDF and made some CSS changes for style.  
 
-I've curated these docs to capture different docs types, per [Diátaxis](https://diataxis.fr/map/): conceptual, procedural, reference, and tutorial. 
+I've curated these docs to capture different docs types, per [Diátaxis](https://diataxis.fr/map/): conceptual, procedural, reference, and tutorial. The docs are shortened and don't reflect the full scope of the live projects.
 
 * All docs were written in VS Code.
 * I collaborated with stakeholders through GitHub using git version control.
-* I took product screenshots with SnagIt. To avoid conflicts of interest, I've removed the original images and replaced them with something more whimsical.
-* As an additional note, I've removed all hyerplinks but kept the Markdown format to give you a sense of when/how I link to other docs. 
+* I took product screenshots with SnagIt. To avoid any conflicts, I've removed the original images and replaced them with something more whimsical.
+* As an additional note, I've removed all hyperlinks but kept the Markdown format to give you a sense of when/how I link to other docs. 
 
 I recommend [checking out my GitHub account](https://github.com/akristen) if you're curious about how I provide feedback to engineering and product SMEs, or how I might manage sweeping changes to information architecture.
 

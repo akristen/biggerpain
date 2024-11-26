@@ -20,7 +20,7 @@
 
   <meta itemprop="name" content="Tutorial to resolve app outage with host data">
   <meta itemprop="description" content="Learn how to identify failing apps using infrastructure data.">
-  <meta itemprop="wordCount" content="949">
+  <meta itemprop="wordCount" content="889">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Tutorial to resolve app outage with host data">
   <meta name="twitter:description" content="Learn how to identify failing apps using infrastructure data.">
@@ -291,10 +291,10 @@
 
         <div class="content">
           <h1>Tutorial to resolve app outage with host data</h1>
-          <p>Your infrastructure requires regular inspection and maintenance. Like a city planner designing a new road or bridge, decisions about what your system needs should come from careful observation about existing limitations. For cities, this looks like adding new lanes to major thoroughfares when traffic congestion increases in the morning or evening. For a tech stack, this looks like a series of resource decisions that affect the performance of your APIs, services, and apps.</p>
-<p>With our infrastructure agent, you can regularly collect metrics and event data so you know if your infrastructure is scaling appropriately. What processes affect CPU and disk usage? How does an app behave just before a CPU spike? Are your hosts reacting to a database failure? How quickly you can answer these questions is the difference between an outright outage, a minor incident, or a smooth autoscale.</p>
+          <p>Your infrastructure requires regular inspection and maintenance. Like a city planner designing a new road or bridge, decisions about what your system needs should come from careful observation about existing limitations. For a tech stack, this looks like a series of resource decisions that affect the performance of your APIs, services, and apps.</p>
+<p>With our agent, you can collect metrics and event data to help you make resource decisions about your system infrastructure. This doc synthesizes a platform journey for troubleshooting app failure with host data.</p>
 <h2>Objectives<span class="hx-absolute -hx-mt-20" id="objectives"></span>
-    <a href="#objectives" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>This doc synthesizes a platform journey for troubleshooting app failure with host data. You will learn to:</p>
+    <a href="#objectives" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>You will learn to:</p>
 <ul>
 <li>Scope your data to help you find root cause</li>
 <li>Make data-driven resource decisions using your host data</li>
@@ -303,36 +303,44 @@
 <h2>Make a resource decision about an outage<span class="hx-absolute -hx-mt-20" id="make-a-resource-decision-about-an-outage"></span>
     <a href="#make-a-resource-decision-about-an-outage" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="steps hx-ml-4 hx-mb-12 ltr:hx-border-l rtl:hx-border-r hx-border-gray-200 ltr:hx-pl-6 rtl:hx-pr-6 dark:hx-border-neutral-800 [counter-reset:step]">
 <h3>Start with your alerts<span class="hx-absolute -hx-mt-20" id="start-with-your-alerts"></span>
-    <a href="#start-with-your-alerts" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Head on over to <strong>PLATFORMWEBSITE &gt; TILE NAME HERE &gt; ANOTHER THING TO SELECT &gt; Infrastructure</strong> to view your summary page. When you&rsquo;re first building out your maintenace workflows, we recommend starting with <strong>Summary page overview</strong> until you find a  better starting point for your unique use case. It shows you a <em>lot</em> of aggregated data about your system, but we can break this down into something more manageable.</p>
+    <a href="#start-with-your-alerts" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>When you&rsquo;re first building out your maintenace workflows, we recommend starting with <strong>Summary page overview</strong> until you find a  better starting point for your unique use case. To start out, we&rsquo;re going to head on over to <strong>PLATFORMWEBSITE &gt; TILE NAME HERE &gt; ANOTHER THING TO SELECT &gt; Infrastructure</strong> to view the summary page. This page shows you a <em>lot</em> of aggregated data about your system, but we can break this down into something more manageable.</p>
 <p><img src="/image/stildata.png" alt="stildata" loading="lazy" /></p>
 <p>We&rsquo;ve divided your summary page into three sections:</p>
 <ul>
 <li>A row of four widgets that identify the particulars of your system, like the number of apps serviced by your hosts and how many alerts are notifying you about incidents in your system.</li>
-<li>A middle section of time series graphs showing you a high level overview of your CPU, memory, and disk resources.</li>
+<li>A middle section with time series graphs showing you a high level overview of your CPU, memory, and disk resources.</li>
 <li>A summary table that breaks down these metrics by individual hosts.</li>
 </ul>
-<p>You might be familiar with our filter bar anchored to the top of all our capability pages. You can use this filter bar to scope all your infrastructure summary page to show data only about alerting entities. Add this query to the filter bar: <code>alertSeverity = 'CRITICAL'</code></p>
-<p>Notice how the time series graphs and summary table scoped from hundreds of hosts to only three.</p>
+<p>You might be familiar with our filter bar anchored to the top of all our capability pages. You can use this filter bar to scope the summary page to data about alerting entities. We&rsquo;ve added this query to the filter bar: <code>alertSeverity = 'CRITICAL'</code></p>
 <h3>Find the failing app<span class="hx-absolute -hx-mt-20" id="find-the-failing-app"></span>
-    <a href="#find-the-failing-app" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The <strong>CPU (%)</strong> time series indicates that <code>apache-svr01</code> spiked from 15% CPU usage to just over 60%. Around that same time, <code>proxy-west-2</code> mimicked the behavior while <code>host-tower-chicago</code> flatlined. This isn&rsquo;t enough information to declare our root cause, but it does limit the range of possibilities for our incident. There are any number of reasons for high CPU, but it&rsquo;s likely the issue has something to do with either:</p>
+    <a href="#find-the-failing-app" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Notice how this query scoped the entire page from hundreds of hosts to three.</p>
+<p><img src="/image/stildata.png" alt="stildata" loading="lazy" /></p>
+<p>The <strong>CPU (%)</strong> time series indicates that:</p>
+<ul>
+<li><code>apache-svr01</code> spiked from 15% CPU usage to just over 60%</li>
+<li><code>proxy-west-2</code> mimicked the behavior</li>
+<li><code>host-tower-chicago</code> flatlined</li>
+</ul>
+<p>This isn&rsquo;t enough information to declare our root cause, but it does limit the range of possibilities for our incident. There are any number of reasons for high CPU, but it&rsquo;s likely the issue has something to do with either:</p>
 <ul>
 <li>The app is running a redundant process that&rsquo;s causing CPU to spike, so the app-owning team needs to optimize some code.</li>
-<li>More end users are accessing a certain component and adding stress to your system, so you need to provision more resources to meet that load.</li>
+<li>More end users are accessing a certain component and adding stress to our system, so we need to provision more resources to meet that load.</li>
 </ul>
-<p>If you click the applications widget, your summary page opens a relationship modal that shows you the different apps serviced by your hosts. Only the <code>Orders team</code> service is alerting and its related to <code>apache-svr01</code> but not the other two.</p>
+<p>If we click the applications widget, our summary page opens a relationship modal that shows different apps serviced by various hosts. Note how the <code>Orders team</code> service is both alerting a critical incident and has a rrelationship to <code>apache-svr01</code> (but not the other two).</p>
 <p><img src="/image/stildata.png" alt="stildata" loading="lazy" /></p>
-<p>Exit the modal and return to the summary page, then click <code>apache-svr-01</code> from the summary table. Clicking a particular host opens a new summary page with data specific to that host.</p>
+<p>We can exit the modal and return to the summary page so we can explore the overview page for <code>apache-svr-01</code>.</p>
 <h3>Determine root cause<span class="hx-absolute -hx-mt-20" id="determine-root-cause"></span>
-    <a href="#determine-root-cause" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Since we&rsquo;ve also found our fussy app, we want to test our two hypotheses from earlier and answer the question: is app failure related to inefficient code or stress on the system? At this stage, the goal is to identify any patterns that help us understand the dramatic spike in CPU percentage.</p>
-<p>The host-specific summary page shows familiar widgets like CPU, memory, and disk usage, but also includes data about network, processes, load, and storage. To the right of the page your sidebar shows information about latest events limited to 30 minutes ago, any other related entities, and open issues your team&rsquo;s created.</p>
+    <a href="#determine-root-cause" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Since we&rsquo;ve identified our fussy app, we can start testing our hypotheses from earlier. At this stage, the goal is to identify any patterns that help us answer the question: is app failure related to inefficient code or stress on the system?</p>
+<p>The host overview page shows familiar widgets like CPU, memory, and disk usage, but also includes data about network, processes, load, and storage. To the right of the page is a sidebar that shows information about latest events limited to 30 minutes ago, any other related entities, and open issues your team&rsquo;s created. This isn&rsquo;t helpful to us right now, but we suspect you&rsquo;ll encounter situations in the future where it can definitely help you.</p>
 <p><img src="/image/stildata.png" alt="stildata" loading="lazy" /></p>
-<p>Since we&rsquo;re disambiguating whether root cause is about app code or resources, we&rsquo;ll take a quick glance at our <strong>Network</strong> sidebar, then focus our efforts to our <strong>Processes</strong> widget. Based on our screenshot:</p>
+<p>Since we&rsquo;re disambiguating whether root cause is about app code or resources, we&rsquo;ll take a quick glance at our <strong>Network</strong> and <strong>Processes</strong> widgets. We can see that:</p>
 <ul>
-<li>Our load average time series shows regular intervals for the last hour, so nothing unexpected.</li>
-<li>Network traffic shows regular spikes and troughs, but nothing that parallels our CPU % pattern. If load stress affected our CPU %, we&rsquo;d expect to see a steep spike at the same time our CPU spiked, then a potential flatline when the app failed.</li>
+<li>Our load average time series shows regular intervals for the last hour, but nothing that parallels our CPU % pattern.</li>
+<li>Network traffic shows regular interviews, but no parallels either.</li>
 <li>Our running processes show about a dozen different kinds of processes, but there&rsquo;s a <code>ruby</code> process using 77.34% of your CPU.</li>
 </ul>
-<p>This gives us pretty high confidence that the critical incident has to do with some kind of app process, not a resource one. Since we don&rsquo;t need to provision any resources to our host, we can notify the app-owning team that some Ruby process is disrupting their <code>Orders team</code> service.</p>
+<p>If load stress affected our CPU %, we&rsquo;d expect to see a steep spike at the same time our CPU spiked, then a potential flatline when the app failed in the network and load graphs. Since we definitely don&rsquo;t see that, we have pretty high confidence that the critical incident has to do with some kind of app process, not a resource one.</p>
+<p>Since we don&rsquo;t need to provision any resources to our host, we can notify the app-owning team that some Ruby process is disrupting their <code>Orders team</code> service.</p>
 <div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200">
   <div class="ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2"><div class="hx-select-none hx-text-xl" style="font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';">
         ℹ️
