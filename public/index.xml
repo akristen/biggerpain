@@ -1,11 +1,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>alexa kristensen – welcome to my site!</title>
+    <title>alexa kristensen – hi, i&#39;m alexa.</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content in welcome to my site! on alexa kristensen</description>
+    <description>Recent content in hi, i&#39;m alexa. on alexa kristensen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 Nov 2024 12:37:08 -0600</lastBuildDate>
     
 	  <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
