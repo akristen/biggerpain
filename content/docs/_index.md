@@ -27,7 +27,7 @@ With this context, I made some decisions:
 
 This project was ad hoc, ambiguous, and really fun. I learned a lot about AWS and got to do some IA restructuring, which is my favorite kind of docs work.
 
-## Learning about genAI 
+## Learning about GenAI 
 
 There's a lot I could say about my one year journey supporting a feature for genAI-powered apps (hereby AI apps going forward, for brevity).
 
@@ -39,4 +39,4 @@ The doc I've provided is an introduction doc that covers a mix of observability 
 
 ## Going deep with SREs
 
-Even though Company offered some infrastructure solutions, they're primarily known as being app monitoring-forward. As an associate writer, I didn't fully appreciate what this meant or how a docs site might expose a product's strengths and weaknesses. 
+I had the opportunity to do some dedicated work on tutorials (or how-to guides).

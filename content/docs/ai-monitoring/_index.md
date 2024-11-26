@@ -1,5 +1,5 @@
 ---
-title: 'Intro to monitoring for AI'
+title: 'Intro to monitoring for GenAI'
 ---
 
 Monitoring for AI is our solution for application monitoring (APM) for AI. When you enable monitoring for AI, our agents can give you end-to-end visibility into performance, cost, and quality of [supported models](/docs/ai-monitoring/compatibility-requirements-ai-monitoring) from vendors like OpenAI and BedRock. Explore how users interact with an AI assistant, dig into trace-level details about a model's response to an AI event, and compare the performance of different models across app environments. 

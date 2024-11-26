@@ -1,5 +1,5 @@
 ---
-title: 'Integrate with AWS'
+title: 'Integrate with AWS procedure'
 ---
 
  You can collect metrics about your AWS services in a CloudWatch repository, then use [AWS CloudWatch Metric Streams](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Metric-Streams.html) to direct a real-time stream of metrics to a destination of your choice, like to Company. Integrating AWS with Company lets you view your AWS data alongside your other observability entities, giving you a seamless monitoring experience as you troubleshoot and make improvements to your system environment. 
@@ -65,7 +65,7 @@ You can think of a metric stream as a post office for your AWS metrics while the
 1. Select the Firehose delivery stream you created in the previous step. We recommend giving it a meaningful name, like `our-company-name-metric-stream`. 
 1. Update the default output format to `Open Telemetry 0.7`. JSON is currently unsupported.
 
-### Add your AWS account to platform
+### Connect AWS and platform
 
 You've finished the AWS portion of these procedures, so now it's time to head to the platform. To add your account, go to **PLATFORMWEBSITE > TILE NAME HERE > ANOTHER THING TO SELECT > AWS**. From the left menu, select **Add an AWS account** then select **Use metric streams**. The platform will walk you through the rest!
 
