@@ -4,7 +4,7 @@ title: 'welcome to my site!'
 description: I write sometimes
 ---
 
-<img src="/image/pfp.png" width="30%" height="auto" />
+<img src="/image/pfp.png" width="60%" height="auto" />
 
 <center>
 
