@@ -20,7 +20,7 @@
 
   <meta itemprop="name" content="API reference `record_llm_feedback_event`">
   <meta itemprop="description" content="Record an LLM feedback event so you can correlate end user feedback with an LLM response">
-  <meta itemprop="wordCount" content="230">
+  <meta itemprop="wordCount" content="208">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="API reference `record_llm_feedback_event`">
   <meta name="twitter:description" content="Record an LLM feedback event so you can correlate end user feedback with an LLM response">
@@ -329,9 +329,9 @@
 <h2>Requirements<span class="hx-absolute -hx-mt-20" id="requirements"></span>
     <a href="#requirements" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Ensure you have your API key and you&rsquo;re using agent version 9.8.0 or higher.</p>
 <h2>Description<span class="hx-absolute -hx-mt-20" id="description"></span>
-    <a href="#description" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>The agent API can record a feedback event <code>LlmFeedbackMessage</code> that describes whether an end user found an LLM response helpful. You need to create a function that correlates the feedback itself with the relevant LLM message. The agent API, however, records this data in different places since both events occur in two transactions. This means your function needs to:</p>
+    <a href="#description" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>The agent API can record a feedback event <code>LlmFeedbackMessage</code> that describes whether an end user found an LLM response helpful. The agent API, however, records this data in different places since both events occur in two transactions. This means your function needs to:</p>
 <ol>
-<li>Capture the trace ID within the endpoint that generates the LLM message (<code>fakefunction.agent.current_trace_id()</code>). The trace ID acts as the connective tissue between feedback and LLM rresponse.</li>
+<li>Capture the trace ID that generates with LLM message (<code>fakefunction.agent.current_trace_id()</code>) since the trace ID can connect feedback to LLM rresponse.</li>
 <li>Pass that trace ID to the endpoint that records the feedback (<code>fakefunction.agent.record_llm_feedback_event()</code>)</li>
 </ol>
 <h2>Parameters<span class="hx-absolute -hx-mt-20" id="parameters"></span>

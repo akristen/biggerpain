@@ -18,9 +18,9 @@ Ensure you have your API key and you're using agent version 9.8.0 or higher.
 
 ## Description 
 
-The agent API can record a feedback event `LlmFeedbackMessage` that describes whether an end user found an LLM response helpful. You need to create a function that correlates the feedback itself with the relevant LLM message. The agent API, however, records this data in different places since both events occur in two transactions. This means your function needs to:
+The agent API can record a feedback event `LlmFeedbackMessage` that describes whether an end user found an LLM response helpful. The agent API, however, records this data in different places since both events occur in two transactions. This means your function needs to:
 
-1. Capture the trace ID within the endpoint that generates the LLM message (`fakefunction.agent.current_trace_id()`). The trace ID acts as the connective tissue between feedback and LLM rresponse. 
+1. Capture the trace ID that generates with LLM message (`fakefunction.agent.current_trace_id()`) since the trace ID can connect feedback to LLM rresponse. 
 2. Pass that trace ID to the endpoint that records the feedback (`fakefunction.agent.record_llm_feedback_event()`)
 
 ## Parameters 
