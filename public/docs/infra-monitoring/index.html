@@ -20,7 +20,7 @@
 
   <meta itemprop="name" content="Tutorial to resolve app outage with host data">
   <meta itemprop="description" content="Learn how to identify failing apps using infrastructure data.">
-  <meta itemprop="wordCount" content="889">
+  <meta itemprop="wordCount" content="909">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Tutorial to resolve app outage with host data">
   <meta name="twitter:description" content="Learn how to identify failing apps using infrastructure data.">
@@ -291,7 +291,7 @@
 
         <div class="content">
           <h1>Tutorial to resolve app outage with host data</h1>
-          <p>Your infrastructure requires regular inspection and maintenance. Like a city planner designing a new road or bridge, decisions about what your system needs should come from careful observation about existing limitations. For a tech stack, this looks like a series of resource decisions that affect the performance of your APIs, services, and apps.</p>
+          <p>Your infrastructure requires regular inspection and maintenance. Like a city planner designing a new road or bridge, decisions about what your system needs should come from careful observation about existing limitations. For a tech stack, this looks like a series of resource decisions that you may need to provision to enhance the performance of your apps and services.</p>
 <p>With our agent, you can collect metrics and event data to help you make resource decisions about your system infrastructure. This doc synthesizes a platform journey for troubleshooting app failure with host data.</p>
 <h2>Objectives<span class="hx-absolute -hx-mt-20" id="objectives"></span>
     <a href="#objectives" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>You will learn to:</p>
@@ -326,7 +326,7 @@
 <li>The app is running a redundant process that&rsquo;s causing CPU to spike, so the app-owning team needs to optimize some code.</li>
 <li>More end users are accessing a certain component and adding stress to our system, so we need to provision more resources to meet that load.</li>
 </ul>
-<p>If we click the applications widget, our summary page opens a relationship modal that shows different apps serviced by various hosts. Note how the <code>Orders team</code> service is both alerting a critical incident and has a rrelationship to <code>apache-svr01</code> (but not the other two).</p>
+<p>If we click the applications widget, our summary page opens a relationship modal that shows different apps serviced by various hosts. Note how the <code>Orders team</code> service is both alerting a critical incident and has a relationship to <code>apache-svr01</code>. We can assume that something changed first with <code>Orders team</code> and <code>apache-svr01</code>, which then affected our other two alerting hosts.</p>
 <p><img src="/image/stildata.png" alt="stildata" loading="lazy" /></p>
 <p>We can exit the modal and return to the summary page so we can explore the overview page for <code>apache-svr-01</code>.</p>
 <h3>Determine root cause<span class="hx-absolute -hx-mt-20" id="determine-root-cause"></span>
