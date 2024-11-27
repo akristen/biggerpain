@@ -3,7 +3,7 @@ title: Tutorial to resolve app outage with host data
 description: Learn how to identify failing apps using infrastructure data.
 ---
 
-Your infrastructure requires regular inspection and maintenance. Like a city planner designing a new road or bridge, decisions about what your system needs should come from careful observation about existing limitations. For a tech stack, this looks like a series of resource decisions that affect the performance of your APIs, services, and apps.
+Your infrastructure requires regular inspection and maintenance. Like a city planner designing a new road or bridge, decisions about what your system needs should come from careful observation about existing limitations. For a tech stack, this looks like a series of resource decisions that you may need to provision to enhance the performance of your apps and services.
 
 With our agent, you can collect metrics and event data to help you make resource decisions about your system infrastructure. This doc synthesizes a platform journey for troubleshooting app failure with host data.
 
@@ -51,7 +51,7 @@ This isn't enough information to declare our root cause, but it does limit the r
 * The app is running a redundant process that's causing CPU to spike, so the app-owning team needs to optimize some code.
 * More end users are accessing a certain component and adding stress to our system, so we need to provision more resources to meet that load.
 
-If we click the applications widget, our summary page opens a relationship modal that shows different apps serviced by various hosts. Note how the `Orders team` service is both alerting a critical incident and has a rrelationship to `apache-svr01` (but not the other two). 
+If we click the applications widget, our summary page opens a relationship modal that shows different apps serviced by various hosts. Note how the `Orders team` service is both alerting a critical incident and has a relationship to `apache-svr01`. We can assume that something changed first with `Orders team` and `apache-svr01`, which then affected our other two alerting hosts.  
 
 ![stildata](/image/stildata.png)
 
