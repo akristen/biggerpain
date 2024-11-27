@@ -18,7 +18,7 @@ You should poke around [my GitHub account](https://github.com/akristen) if you'r
 
 In FY24, I supported a major launch that let data scientists and developers monitor their LLM-based apps. Regardless of my personal opinions about AI hype, the experience allowed me to wrestle with a technology that had real industry ambiguity. Our user researcher summed it up well: GenAI is an area where practicioners learn as they do. This held true for me, too. 
 
-I learned alongside my SMEs, and my research quickly moved beyond tech news and forums into the world of academia. I tested my research and ventured guesses about how certain LLM processes might work and, to no one's surprise let alone my own, those guesses proved inadequate. But my SMEs were patient and helpful, and I'm a quick learner. Together we pushed out a ton of docs about a completely new feature in a completely new tech space. I can talk with confidence about embeddings, tokenization, vector databases, LLM temperature—the whole gamut.
+I learned alongside my SMEs, and my research quickly moved beyond tech news and forums into the world of academia. I tested my research and ventured guesses about how certain LLM processes might work. To no one's surprise let alone my own, those guesses proved inadequate. But my SMEs were patient and helpful, and I'm a quick learner. Together we pushed out a ton of docs about a completely new feature in a completely new tech space. I can talk with confidence about embeddings, tokenization, vector databases, LLM temperature—the whole gamut.
 
 I've included two docs from this feature release. The first is an introduction doc that covers a mix of observability and AI concepts. The second is an API reference for retrieving certain kinds of LLM data. 
 
@@ -38,9 +38,9 @@ This project was ad hoc, ambiguous, and really fun. I learned a lot about AWS an
 
 ## Going deep with SREs
 
-I created some how-to guides in FY23 to help customers navigate the platform's UI. I wanted these docs to help users think about their data and the platform in a more meaningful way. That is, I wanted to create a story with clear cause and effect rather than a descriptive doc about what each component or element in the UI did. I kept the story relatively simple for a couple reasons:
+I created some how-to guides in FY23 to help customers navigate the platform's UI. I wanted these docs to help users think about their data and the platform in a more meaningful way. That is, I wanted to create a story with clear cause and effect rather than a descriptive doc about what each UI component or element did. I kept the story relatively simple for a couple reasons:
 
-* Since the majority of Company's customers are app developers, I decided a simple story could get them thinking like an SRE, even if that's not a hat they usually wear. 
+* Since app developers primarily use Company's platform, I decided the doc could invite them to think about their data like an SRE, even if that's not a hat they usually wear. 
 * If an SRE used the doc, I suspected they could take this basic framework and complexify it to fit their use cases.
 
 These how-to guides gave me plenty of exposure to our field and support teams. While I chatted with product and engineering to get a sense of why they made certain prod decisions, it was important to me that I wrote a story about how our users are actually using the product, rather than how we wanted them to.
